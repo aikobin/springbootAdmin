@@ -3,6 +3,25 @@ server:
 spring:
   application:
     name: admin-server
+  mail:
+    host: smtp.qq.com
+    username: 582748391@qq.com
+    password: rukabin8081
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 582748391@qq.com # 发送给谁
+          from: 582748391@qq.com # 是谁发送出去的
+    
+    
 eureka:
   instance:
       hostname: 192.168.32.140
